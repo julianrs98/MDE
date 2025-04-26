@@ -1,0 +1,52 @@
+
+//
+
+@keyframes slideLeft {
+    from {
+        transform: translate(-430px, 0);
+    }
+    to {
+        transform: translateX(-50px);
+    }
+}
+
+.slider-mobile img {
+    animation: slideLeft 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.headers-mobile {
+    opacity: 0; /* Ukryj element na starcie */
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes expandDiv {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(100);
+    } 51% {
+        transform: scale(1); 
+    }
+}
+
+
+@keyframes rollDiv {
+    0% {
+        transform: scale(100);
+    }
+    50% {
+        transform: scale(1); 
+    } 51% {
+        transform: scale(1); 
+    }
+}

@@ -1,0 +1,84 @@
+.opinions {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    .number-row {
+        height: 102px;
+        width: 100%;
+        margin-bottom: 50px; /* Możesz zmienić wartość na inną */
+        display: flex;
+        align-items: center;
+  
+        .number-punctor {
+            height: 100%;
+            width: 7px;
+            margin-right: 20px;
+            background-color: $primary-color;
+        }
+        p {
+            color: $primary-color;
+        }
+        h1 {
+            font-size: 55px;
+            font-weight: 600;
+            color: $primary-color;
+        }
+    }
+}
+
+.comments {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: 7px solid $primary-color;
+    text-align: left;
+    h2 {
+        color: $primary-color;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .stars-row {
+       span img {
+        width: 24px;
+        height: 25px;
+       }
+    }
+    > div {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+#counter {
+    font-size: 3rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+#counter.animate {
+    transform: scale(1.05);
+}
+
+.statistic {
+    font-size: 50px;
+}
+
+.counter {
+    color: $primary-color;
+    font-size: 55px;
+}
+
+
+// ***********TABLET MEDIA QUARIES************
+
+@media screen and (min-width: 768px) {
+    .counters {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .number-row {
+        display: inline-block;
+    }
+}
