@@ -3,6 +3,7 @@
 }
 
 .team {
+    width: 100%;
     padding: 40px 0;
     background-image: url(../img/section-team.jpg);
     background-size: cover;
@@ -58,7 +59,6 @@
 @keyframes slideIn {
     from {
         transform: translateX(310px);
-
     }
     to {
         transform: translateX(55px);
@@ -70,6 +70,20 @@
 // ***********TABLET MEDIA QUARIES************
 
 @media  (min-width: 780px) {
+
+    .about {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        .experience-img {
+            width: 50%;
+        }
+        .about-text {
+            font-size: 1.3rem;
+            padding: 0;
+        }
+    }
+
     .person-box  > div {
         background-repeat: no-repeat;
         background-size: contain;
