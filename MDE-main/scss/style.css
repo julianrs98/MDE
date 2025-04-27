@@ -725,29 +725,38 @@ main #contactus .contactus-img img {
 /*
 // TODO : 
   sekcja kafelków ma być przy 1024 ma być tak jak u mnie.
-  sekcaj napiszDoNas do zrobienia desktop od 1024
+  sekcja napiszDoNas do zrobienia desktop od 1024
   footer do poprawy
 */
 footer {
+  width: 100%;
   padding: 40px 0px;
 }
-
-.footer-logos {
+footer .footer-box {
+  width: 100%;
+  padding: 5%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: start;
 }
-.footer-logos > img {
+
+.footer-symbols {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-symbols > img {
   margin-right: 20px;
 }
-.footer-logos img {
+.footer-symbols img {
   width: 176px;
 }
 
 .symbols-data {
   display: flex;
   align-items: center;
-  justify-content: start;
   margin-bottom: 20px;
 }
 .symbols-data p {
@@ -759,21 +768,26 @@ footer {
   margin-right: 10px;
 }
 
+.socials {
+  display: flex;
+  justify-content: space-around;
+}
+
 .sc-logo img {
   width: 35px;
 }
 
+.footer-logos img {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
-  .footer-logos {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-logos img {
-    margin-bottom: 20px;
-  }
-  footer > div > div {
-    display: flex;
-    align-self: center;
+  .footer-symbols {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
   }
 }
 .navbar {
@@ -1486,11 +1500,36 @@ button {
 }
 .form {
   width: 100%;
-  padding: 40px 0;
+  padding: 5%;
   background-image: url(../img/form/form-secton.jpg);
   background-size: cover;
   background-position: top;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.form .title-container {
+  width: 45%;
+  display: none;
+  background-color: #e7196a;
+  padding: 1%;
+  text-align: start;
+  line-height: normal;
+}
+.form .title-container h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.form .title-container h2 span {
+  color: #1e2248;
+  font-size: 3rem;
+}
+.form .title-container h4 {
+  font-size: 2rem;
+}
+.form .form-container {
+  width: 100%;
+  padding: 0 5%;
 }
 
 .form-group label {
@@ -1551,4 +1590,22 @@ button {
 
 .submit-btn {
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .form .title-container {
+    display: block;
+  }
+  .form .form-container {
+    width: 50%;
+    padding: 0;
+  }
+  .form .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form-container form button {
+    max-width: 220px;
+    align-self: flex-end;
+  }
 }/*# sourceMappingURL=style.css.map */
