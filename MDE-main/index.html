@@ -45,11 +45,19 @@
           <div class="phone-btn">
             <img src="img/phone.png">
           </div>
-          <div class="hamburger-btn">
+          <div id="hamburger-btn">
             <div class="hamburger-lane"></div>
             <div class="hamburger-lane"></div>
             <div class="hamburger-lane"></div>
           </div>
+          <nav id="menu">
+            <ul>
+              <li data-section="services">Usługi</li>
+              <li data-section="opinions">Opinie</li>
+              <li data-section="about">O nas</li>
+              <li data-section="contact">Kontakt</li>
+            </ul>
+          </nav>
         </div>
       </div>
     </nav>
@@ -57,19 +65,21 @@
       <img src="img/icon-dark_theme.png">
     </div>
     <div class="slider-mobile ">
-        <img src="img/banner1.png" decoding="async" alt="women with tablet">
-        <div class="headers-mobile">
-          <h1>PROFEJSONALNA KSIĘGOWOŚĆ
-          <br><span style="color:white">DLA CIEBIE</span></h1>
-          
+        <div class="slider-images">
+          <img class="active mobile-slide" src="img/Carousel_mobile/banner1.png"  decoding="async" alt="women with tablet">
+          <img class="mobile-slide" src="img/Carousel_mobile/banner2.png" decoding="async" alt="women with tablet">
+          <img class="mobile-slide" src="img/Carousel_mobile/banner3.png" decoding="async" alt="women with tablet">
+        </div>
+        <div class="headers-mobile showUp">
+          <h1 id="main-header">PROFESJONALNA OBSŁUGA KSIĘGOWA<br><span style="color:white">DLA TWOJEGO BIZNESU</span></h1>  
         </div>
         <div class="slider-squares">
-          <div class="square active"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+          <div class="carousel-square active"></div>
+          <div class="carousel-square"></div>
+          <div class="carousel-square"></div>
         </div>
     </div>
-    <section class="widgets">
+    <section class="widgets" data-section="usługi">
       <div class="container widgets-container">
         <div class="widget-box widget-box--secondary widgets-box--1">
           <div>
@@ -140,7 +150,7 @@
           <div class="number-row">
             <div class="number-punctor"></div>
             <div>
-              <p class="statistic">+ <span class="counter" data-end="450">9000</span></p>
+              <p class="statistic">+ <span class="counter" data-end="9000">9000</span></p>
               <h2>Rozliczonych faktur</h2>
             </div>
           </div>

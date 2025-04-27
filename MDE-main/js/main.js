@@ -1,134 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('Strona załadowana.');
-// });
-
-
-// // document.getElementById('alertButton').addEventListener('click', () => {
-// //     alert('Witaj, kliknąłeś przycisk!');
-// // });
-
-// const slides = document.querySelectorAll('.custom-carousel-item');
-// const indicators = document.querySelectorAll('.custom-indicator');
-// const carouselSlides = document.querySelector('.custom-carousel-slides');
-// let currentIndex = 1; // Startujemy od indeksu 1, aby pokazać pierwszy prawdziwy slajd
-// let autoSlideInterval;
-
-// // Funkcja do ustawienia szerokości slajdu
-// function getSlideWidth() {
-//   return slides[0].clientWidth;
-// }
-
-// // Funkcja do wyświetlania slajdu na podstawie indeksu
-// function showSlide(index) {
-//   const slideWidth = getSlideWidth(); // Za każdym razem pobieramy szerokość
-//   carouselSlides.style.transition = 'transform 0.5s ease-in-out';
-//   carouselSlides.style.transform = `translateX(-${index * slideWidth}px)`;
-
-//   // Aktualizacja wskaźników
-//   indicators.forEach((indicator, i) => {
-//     indicator.classList.toggle('active', i === (index - 1) % indicators.length);
-//   });
-// }
-
-// // Przeskakiwanie na początek lub koniec karuzeli
-// carouselSlides.addEventListener('transitionend', () => {
-//   if (currentIndex >= slides.length - 1) {
-//     carouselSlides.style.transition = 'none';
-//     currentIndex = 1; // Wracamy do pierwszego rzeczywistego slajdu
-//     carouselSlides.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
-//   } else if (currentIndex <= 0) {
-//     carouselSlides.style.transition = 'none';
-//     currentIndex = slides.length - 2; // Wracamy do ostatniego rzeczywistego slajdu
-//     carouselSlides.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
-//   }
-// });
-
-// // Funkcja przechodzenia do następnego slajdu
-// function nextSlide() {
-//   currentIndex++;
-//   showSlide(currentIndex);
-// }
-
-// // Funkcja przechodzenia do poprzedniego slajdu
-// function prevSlide() {
-//   currentIndex--;
-//   showSlide(currentIndex);
-// }
-
-// // Reset automatycznego przesuwania
-// function resetAutoSlide() {
-//   clearInterval(autoSlideInterval);
-//   autoSlideInterval = setInterval(nextSlide, 5000);
-// }
-
-// // Obsługa przycisków do zmiany slajdów
-// document.querySelector('.custom-carousel-next').addEventListener('click', () => {
-//   nextSlide();
-//   resetAutoSlide();
-// });
-
-// document.querySelector('.custom-carousel-prev').addEventListener('click', () => {
-//   prevSlide();
-//   resetAutoSlide();
-// });
-
-// // Wskaźniki (kropki)
-// indicators.forEach((indicator, index) => {
-//   indicator.addEventListener('click', () => {
-//     currentIndex = index + 1;
-//     showSlide(currentIndex);
-//     resetAutoSlide();
-//   });
-// });
-
-// // Automatyczne przewijanie
-// autoSlideInterval = setInterval(nextSlide, 5000);
-
-// // Początkowe wyświetlenie
-// showSlide(currentIndex);
-
-// // Zapewnienie, że szerokość jest aktualizowana przy zmianie rozmiaru okna
-// window.addEventListener('resize', () => {
-//   showSlide(currentIndex);
-// });
-
-
-// // ############################ Zmiana jezyka ##############################
-
-// function changeLanguage(lang) {
-//   alert(`Język zmieniony na: ${lang}`);
-//   // Tutaj można dodać logikę zmieniającą język na stronie
-// }
-
-// // ############################ Zmiana motywu ##############################
-
-// const switchButton = document.querySelector("header button");
-// let theme = localStorage.getItem("theme");
-
-// switchButton.addEventListener("click", () => {
-//   console.log("siema");
-//     if (theme === "dark") {
-//         document.querySelector("body").classList.remove("dark");
-//         document.querySelector("body").classList.add("light");
-//         theme = "light";
-//     } else {
-//         document.querySelector("body").classList.remove("light");
-//         document.querySelector("body").classList.add("dark");
-//         theme = "dark";
-//     }
-
-//     localStorage.setItem("theme", theme);
-// });
-
-// if (theme === "dark") {
-//     document.querySelector("body").classList.add("dark");
-// }
-
-// if (theme === "light") {
-//     document.querySelector("body").classList.add("light");
-// }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const experienceSection = document.querySelector(".experience-img");
@@ -152,10 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const puzzleHand = document.querySelector(".puzzle-hand");
 
     function checkVisibility() {
-        const rect = puzzleHand.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        if (rect.top < windowHeight && rect.bottom > 0) {
+        if (top < windowHeight && bottom > 0) {
             puzzleHand.classList.add("active"); // Dodajemy klasę, by uruchomić animację
         }
     }
@@ -386,4 +254,141 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(counter => observer.observe(counter));
   });
+
+
+// slider mobile
+
+let sliderImages = document.getElementsByClassName('mobile-slide');
+let carouselSqaures = document.getElementsByClassName('carousel-square')
+let mainHeader = document.getElementById('main-header')
+let headerMobileHolder = document.querySelector('.headers-mobile')
+
+
+
+let headerArr = [
+  'PROFESJONALNA OBSŁUGA KSIĘGOWA<br><span style="color:white">DLA TWOJEGO BIZNESU</span>',
+  'ROZLICZENIA<br><span style="color:white">W POLSCE<br>ORAZ NIEMCZECH</span>',
+  'ZWIĘKSZ SWÓJ KAPITAŁ<br><span style="color:white">Z NASZĄ POMOCĄ</span>'
+];
+
+
+
+
+
+let intervalId;
+
+
+sliderImages = Array.from(sliderImages);
+carouselSqaures = Array.from(carouselSqaures);
+
+let nrOfSlide = -1;
+console.log(sliderImages);
+console.log(mainHeader)
+
+function changeSlide() {
+  headerMobileHolder.classList.add('showUp');
+  nrOfSlide++;
+  if (nrOfSlide >= sliderImages.length) {
+    nrOfSlide = 0;
+  }
+  carouselSqaures.forEach(function(elem){
+    elem.classList.remove('active')
+  })
+  sliderImages.forEach(function(elem){
+    elem.classList.remove('active')
+  })
+  sliderImages[nrOfSlide].classList.add('active')
+  carouselSqaures[nrOfSlide].classList.add('active')
+  mainHeader.innerHTML = headerArr[nrOfSlide];
+  setTimeout(() => {
+    headerMobileHolder.classList.remove('showUp');
+  }, 2000);
+};
+
+
+// Start interwału
+function startInterval() {
+  intervalId = setInterval(changeSlide, 3500);
+}
+
+// Zatrzymanie interwału
+function resetInterval() {
+  clearInterval(intervalId);
+  startInterval();
+}
+
+carouselSqaures.forEach(function(square) {
+  square.addEventListener('click', changeSlideBySquare);
+});
+
+function changeSlideBySquare(event) {
+  const index = Array.from(carouselSqaures).indexOf(this);
+  carouselSqaures.forEach(function(elem){
+    elem.classList.remove('active')
+  })
+  sliderImages.forEach(function(elem){
+    elem.classList.remove('active')
+  })
+  sliderImages[index].classList.add('active')
+  carouselSqaures[index].classList.add('active')
+  mainHeader.innerHTML = headerArr[index];
+  nrOfSlide = index;
+  resetInterval(); // <-- Po kliknięciu resetuj interwał
+}
+
+startInterval();
+
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navBar = document.querySelector('.navbar');
+const menu = document.querySelector('#menu');
+console.log(menu)
+
+
+hamburgerBtn.addEventListener('click', function() {
+  navBar.classList.toggle('overflow');
+  this.classList.toggle('active');
+
+  if (menu.style.display === 'flex') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'flex';
+    menu.style.flexDirection = 'column'; // Jeśli chcesz kolumnowo
+    menu.style.alignItems = 'center';     // Opcjonalnie wyśrodkowanie
+    menu.style.justifyContent = 'center'; // Opcjonalnie wyśrodkowanie
+  }
+});
+
+
+
+const menuItems = document.querySelectorAll('ul li');
+const services = document.querySelector('.widgets')
+const opinions = document.querySelector('.opinions')
+const about = document.querySelector('.about')
+const contact = document.querySelector('.contact')
+
+
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', function() {
+    menu.style.display = 'none';
+    navBar.classList.toggle('overflow');
+    hamburgerBtn.classList.toggle('active');
+
+    const sectionClass = this.getAttribute('data-section');
+    console.log(sectionClass);
+
+    if (sectionClass === 'services') {
+      services.scrollIntoView({ behavior: 'smooth' });
+    } else if (sectionClass === 'opinions') {
+      opinions.scrollIntoView({ behavior: 'smooth' });
+    } else if (sectionClass === 'about') {
+      about.scrollIntoView({ behavior: 'smooth' });
+    } else if (sectionClass === 'contact') {
+      contact.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
 

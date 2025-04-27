@@ -97,3 +97,15 @@
       background-color: $primary-color;
       border: none;
     }
+
+    .slider-images .mobile-slide {
+      display: none;
+    }
+
+    .slider-images .active {
+      display: block;
+    }
+
+    .slider-images .hidden {
+      display: none;
+    }
