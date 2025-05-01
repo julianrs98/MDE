@@ -372,7 +372,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 main #section-products {
   text-align: center;
@@ -1291,7 +1290,7 @@ button {
 
 .team {
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 5%;
   background-image: url(../img/section-team.jpg);
   background-size: cover;
   background-position: top;
@@ -1311,9 +1310,9 @@ button {
   background-color: #1e2248;
   border: 7px solid #e7196a;
 }
-.person-box div {
+.person-box .person-img {
   width: auto;
-  height: 300px;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -1324,17 +1323,17 @@ button {
 
 .person-img--magda {
   width: 100%;
-  height: 200px;
   background-image: url(../img/magda.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: top;
 }
 
 .person-img--robert {
   width: 100%;
-  height: 200px;
   background-image: url(../img/robert.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -1352,6 +1351,14 @@ button {
     transform: translateX(55px);
   }
 }
+@media (min-width: 425px) {
+  .team {
+    padding: 40px 10%;
+  }
+  .person-img {
+    height: 300px;
+  }
+}
 @media (min-width: 780px) {
   .about {
     display: flex;
@@ -1365,10 +1372,33 @@ button {
     font-size: 1.3rem;
     padding: 0;
   }
-  .person-box > div {
+  .team-container {
+    padding: 40px 10%;
+  }
+  .person-img {
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .team-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .team-container .person-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .team-container .person-box .person-img {
+    width: 40%;
+    min-height: 250px;
+  }
+  .team-container .person-box .person-description {
+    width: 60%;
   }
 }
 .contact {
