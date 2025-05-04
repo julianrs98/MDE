@@ -10,7 +10,7 @@
     }
 }
 
-.slider-mobile img {
+.slider-images .active {
     animation: slideLeft 1s ease-out forwards;
 }
 
@@ -23,10 +23,12 @@
     }
 }
 
-.headers-mobile {
-    opacity: 0; /* Ukryj element na starcie */
-    animation: fadeIn 1.5s ease-out forwards;
+
+.showUp {
+     opacity: 0; /* Ukryj element na starcie */
+     animation: fadeIn 1.5s ease-out forwards;
 }
+
 
 @keyframes expandDiv {
     0% {

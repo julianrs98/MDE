@@ -1,0 +1,39 @@
+
+.popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: $secondary-color;
+    top: 0;
+    right: 0;
+    z-index: 5000;
+    padding: 70px 30px;
+  }
+  
+  .active {
+    display: block;
+  }
+
+
+
+
+  .popup .popup-box span:first-of-type {
+    font-size: 45px;
+    margin-bottom: 15px;
+    display: inline-block;
+    color: $primary-color;
+  }
+
+
+  .popup-box {
+    padding-top: 50px;
+  }
+
+  .popup .popup-box > span:last-of-type {
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+  
