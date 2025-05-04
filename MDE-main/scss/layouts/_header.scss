@@ -183,20 +183,22 @@ header {
       color: $primary-color;
     }
   }
-  .slider-squares {
-    width: 95%;
-    max-height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    .square {
-      width: 19px;
-      height: 19px;
-      margin-left: 10px;
-      background-color: $white-color;
-    }
-    .active {
-      background-color: $primary-color;
-    }
+}
+
+
+.slider-squares {
+  width: 95%;
+  max-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  .carousel-square, .comments-square {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+    background-color: $white-color;
+  }
+  .active {
+    background-color: $primary-color;
   }
 }
 
@@ -214,7 +216,7 @@ header {
 
 .close-btn {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   width: 53px;
   height: 30px;
@@ -228,7 +230,7 @@ header {
   position: absolute;
   width: 100%;
   height: 10px;
-  background-color: #fff;
+  background-color: white;
   top: 50%;
   left: 0;
   transform-origin: center;
@@ -266,3 +268,8 @@ header {
       text-align: center;
   }
 }
+
+
+
+// BURGER NAV
+
