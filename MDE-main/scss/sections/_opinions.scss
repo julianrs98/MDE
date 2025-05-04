@@ -2,6 +2,7 @@
     width: 100%;
     height: auto;
     padding: 50px 0;
+    overflow: hidden;
     .number-row {
         height: 102px;
         width: 100%;
@@ -26,28 +27,84 @@
     }
 }
 
+
+
+
+
+// .comments {
+//     display: flex;
+
+//         .comment {
+//             width: 100%;
+//             flex-direction: column;
+//             justify-content: space-between;
+//             align-items: left;
+//             height: 276px;
+//             margin-top: 20px;
+//             padding: 10px 15px;
+//             border: 7px solid #e7196a;
+//             text-align: left;
+//                 h2 {
+//                     color: $primary-color;
+//                 }
+//                 p {
+//                     margin-bottom: 20px;
+//                 }
+//                 .stars-row {
+//                 span img {
+//                     width: 24px;
+//                     height: 25px;
+//                     }
+//                 }
+//             }
+//             .comment .active {
+//                 display: block;
+//             }
+// }
+
+
 .comments {
-    margin-top: 20px;
-    padding: 10px 15px;
-    border: 7px solid $primary-color;
-    text-align: left;
-    h2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Boxy obok siebie bez łamania linii */
+  
+    .comment {
+      flex: 0 0 auto; /* Nie rozciągaj, nie zmniejszaj */
+      width: 100%; /* Nadajemy stałą szerokość! */
+      margin: 0 20px;
+      padding: 10px 15px;
+      border: 7px solid #e7196a;
+      text-align: left;
+      display: flex; /* Dodajemy flex layout wewnątrz comment */
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start; /* poprawione z 'left' na 'flex-start' */
+  
+      h2 {
         color: $primary-color;
-    }
-    p {
+      }
+  
+      p {
         margin-bottom: 20px;
+      }
+  
+      .stars-row {
+        span img {
+          width: 24px;
+          height: 25px;
+        }
+      }
     }
-    .stars-row {
-       span img {
-        width: 24px;
-        height: 25px;
-       }
+  
+    .active {
+      display: block;
+      order: 1;
     }
-    > div {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-    }
+  }
+  
+
+#comment-text {
+    height: 90%;
 }
 
 #counter {
@@ -67,8 +124,106 @@
 .counter {
     color: $primary-color;
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 600; 
 }
+
+
+.opinions-carousel-squares {
+    display: flex;
+    padding: 15px 0;
+}
+
+.comments-square {
+    width: 19px;
+    height: 19px;
+    margin: 5px;
+    background-color: white;
+}
+
+.slider-squares--comments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        background-color: transparent;
+    }
+    & button:first-child .slider-triangle {
+        transform: rotate(270deg);
+    }
+    & button:last-child .slider-triangle {
+        transform: rotate(90deg);
+    }
+    .active {
+        background-color: $primary-color;
+    }
+
+}
+
+.slider-triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 19px solid $primary-color;
+}
+
+.comment .active {
+    order: 0;
+}
+
+
+
+// Sekcja z logotypami firm
+
+.companies {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .companies-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 80px;
+        background-image: url('../img/Companies/companies-title-strip.png');
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        transform: translateX(-50px);
+        height: 75px;
+        h2 {
+            span {
+                color: $secondary-color;
+            }
+        }
+    }
+    .companies-logotypes {
+        margin-top: 30px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      
+      .companies-track {
+        display: flex;
+        white-space: nowrap;
+      }
+      
+      .companies-track img {
+        width: 120px;
+        margin: 0 40px;
+        flex-shrink: 0;
+        pointer-events: none;
+        user-select: none;
+      }
+}
+
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
 
 
 // ***********TABLET MEDIA QUARIES************

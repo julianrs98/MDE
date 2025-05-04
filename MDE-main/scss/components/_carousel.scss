@@ -47,10 +47,10 @@
       display: flex;
       align-items: flex-end;
       img {
+
         display: block;
         width: 100%;
         height: auto;
-        
       }
     }
     
@@ -100,6 +100,8 @@
 
     .slider-images .mobile-slide {
       display: none;
+      width: 410px;
+      max-height: 401px;
     }
 
     .slider-images .active {

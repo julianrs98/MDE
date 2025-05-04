@@ -286,19 +286,20 @@ header nav button span {
   font-size: 4.5vw;
   color: #e7196a;
 }
-.slider-mobile .slider-squares {
+
+.slider-squares {
   width: 95%;
   max-height: 50px;
   display: flex;
   justify-content: flex-end;
 }
-.slider-mobile .slider-squares .carousel-square {
+.slider-squares .carousel-square, .slider-squares .comments-square {
   width: 19px;
   height: 19px;
   margin-left: 10px;
   background-color: white;
 }
-.slider-mobile .slider-squares .active {
+.slider-squares .active {
   background-color: #e7196a;
 }
 
@@ -316,7 +317,7 @@ header nav button span {
 
 .close-btn {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   width: 53px;
   height: 30px;
@@ -330,7 +331,7 @@ header nav button span {
   position: absolute;
   width: 100%;
   height: 10px;
-  background-color: #fff;
+  background-color: white;
   top: 50%;
   left: 0;
   transform-origin: center;
@@ -863,20 +864,14 @@ footer {
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
   margin: 0 30px;
+  color: white;
 }
-#menu li div:first-child {
-  margin-right: 30px;
-  width: 30px;
-  height: 10px;
+#menu li .list-pointer {
   background-color: #e7196a;
-}
-#menu li div:last-child {
-  margin-left: 30px;
-  width: 30px;
-  height: 10px;
-  background-color: #e7196a;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
 }
 
 .overflow {
@@ -984,6 +979,8 @@ footer {
 
 .slider-images .mobile-slide {
   display: none;
+  width: 410px;
+  max-height: 401px;
 }
 
 .slider-images .active {
@@ -1028,6 +1025,11 @@ button {
 .widgets .widgets-container .widget-box .widget-icon {
   width: 91px;
   height: auto;
+}
+.widgets .widgets-container .widget-box .widget-icon img {
+  width: 91px;
+  height: auto;
+  max-width: 100%;
 }
 .widgets .icon-holder {
   height: 70px;
@@ -1091,33 +1093,103 @@ button {
   margin-top: 30vh;
   text-align: center;
 }
+.widget-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
 .expandDiv {
   animation: expandDiv 1.5s ease-in-out forwards;
   z-index: 10;
 }
 
-.rollDiv {
-  animation: rollDiv 0.9s ease-in-out forwards;
-}
-
 .widget-box {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
 .widget-box.visible {
-  opacity: 1;
-  transform: translateX(-50px);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   transform: translateX(0);
+}
+
+.attribute-box {
+  position: relative;
+}
+.attribute-box button {
+  width: 100%;
+  height: 50px;
+}
+
+.plus {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.attribute-symbole {
+  width: 300px;
+  height: 230px;
+}
+
+.attributes {
+  margin: 60px 0;
+}
+
+.attribute-box {
+  padding-top: 20px;
+  background-color: #1e2248;
+}
+.attribute-box h2 {
+  width: 100%;
+  margin-top: 20px;
+  color: #e7196a;
+  text-align: left;
+  margin-bottom: -10px;
+}
+
+.attribute-list {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+}
+.attribute-list li {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.attribute-list li div {
+  width: 30px;
+  height: 30px;
+  background-color: #e7196a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.attribute-text {
+  width: 100%;
+  padding: 0 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.check-mark {
+  width: 20px;
+}
+
+.plus-icon {
+  width: 50px;
 }
 
 .opinions {
   width: 100%;
   height: auto;
   padding: 50px 0;
+  overflow: hidden;
 }
 .opinions .number-row {
   height: 102px;
@@ -1142,25 +1214,39 @@ button {
 }
 
 .comments {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Boxy obok siebie bez łamania linii */
+}
+.comments .comment {
+  flex: 0 0 auto; /* Nie rozciągaj, nie zmniejszaj */
+  width: 100%; /* Nadajemy stałą szerokość! */
+  margin: 0 20px;
   padding: 10px 15px;
   border: 7px solid #e7196a;
   text-align: left;
+  display: flex; /* Dodajemy flex layout wewnątrz comment */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* poprawione z 'left' na 'flex-start' */
 }
-.comments h2 {
+.comments .comment h2 {
   color: #e7196a;
 }
-.comments p {
+.comments .comment p {
   margin-bottom: 20px;
 }
-.comments .stars-row span img {
+.comments .comment .stars-row span img {
   width: 24px;
   height: 25px;
 }
-.comments > div {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
+.comments .active {
+  display: block;
+  order: 1;
+}
+
+#comment-text {
+  height: 90%;
 }
 
 #counter {
@@ -1183,6 +1269,95 @@ button {
   font-weight: 600;
 }
 
+.opinions-carousel-squares {
+  display: flex;
+  padding: 15px 0;
+}
+
+.comments-square {
+  width: 19px;
+  height: 19px;
+  margin: 5px;
+  background-color: white;
+}
+
+.slider-squares--comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-squares--comments button {
+  background-color: transparent;
+}
+.slider-squares--comments button:first-child .slider-triangle {
+  transform: rotate(270deg);
+}
+.slider-squares--comments button:last-child .slider-triangle {
+  transform: rotate(90deg);
+}
+.slider-squares--comments .active {
+  background-color: #e7196a;
+}
+
+.slider-triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 19px solid #e7196a;
+}
+
+.comment .active {
+  order: 0;
+}
+
+.companies {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.companies .companies-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  background-image: url("../img/Companies/companies-title-strip.png");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  transform: translateX(-50px);
+  height: 75px;
+}
+.companies .companies-header h2 span {
+  color: #1e2248;
+}
+.companies .companies-logotypes {
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.companies .companies-track {
+  display: flex;
+  white-space: nowrap;
+}
+.companies .companies-track img {
+  width: 120px;
+  margin: 0 40px;
+  flex-shrink: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @media screen and (min-width: 768px) {
   .counters {
     width: 100%;
@@ -1608,4 +1783,38 @@ button {
 
 .submit-btn {
   width: 100%;
+}
+
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #1e2248;
+  top: 0;
+  right: 0;
+  z-index: 5000;
+  padding: 70px 30px;
+}
+
+.active {
+  display: block;
+}
+
+.popup .popup-box span:first-of-type {
+  font-size: 45px;
+  margin-bottom: 15px;
+  display: inline-block;
+  color: #e7196a;
+}
+
+.popup-box {
+  padding-top: 50px;
+}
+
+.popup .popup-box > span:last-of-type {
+  font-size: 30px;
+  line-height: 30px;
+  display: inline-block;
+  margin-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */

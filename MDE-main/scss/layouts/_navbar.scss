@@ -98,20 +98,14 @@
         display: flex;
         text-align: center;
         align-items: center;
-        justify-content: space-between;
         margin: 0 30px;
-
-        & div:first-child {
-            margin-right: 30px;
-            width: 30px;
-            height: 10px;
+        color: white;
+        
+        .list-pointer {
             background-color: $primary-color;
-        }
-        & div:last-child {
-            margin-left: 30px;
-            width: 30px;
-            height: 10px;
-            background-color: $primary-color;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
         }
     }
 }
