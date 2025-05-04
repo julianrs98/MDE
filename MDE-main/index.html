@@ -18,25 +18,81 @@
     <link rel="preload" as="image" href="img/bg-bulidng.jpg">
 </head>
 <body>
-
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="language-select">
-          <span>
-            PL
-          </span>
-          <div class="collapse-arrow">
-            <img src="img/Polygon.png">
-          </div>
+  <div class="main-container">
+    <div id="overlay-widgets" class="hidden">
+      <div class="container">
+        <button class="close-btn" aria-label="Zamknij widget">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="widget-text widget-text--6 hideout">
+          <h2>Administracja</h2>
+          <p>Administracja to zorganizowany system zarządzania, którego celem jest sprawne kierowanie działalnością instytucji, organizacji lub państwa. Obejmuje planowanie, podejmowanie decyzji, koordynację działań oraz kontrolę ich wykonania. W sektorze publicznym administracja pełni kluczową rolę w realizacji polityki rządu i świadczeniu usług dla obywateli. Może dotyczyć różnych dziedzin – od zarządzania zasobami ludzkimi, przez finanse, aż po obsługę dokumentacji i procesów biurowych.</p>
         </div>
-        <div class="navbar-right">
-          <div class="phone-btn">
-            <img src="img/phone.png">
+      </div>
+    </div>
+    <header>
+
+<!--
+      <div class="logo">
+              <a href="javascript:location.reload();">
+                <img src="./img/icon-dark_theme.png" alt="MDE logo">
+              </a>
+            </div>
+            <nav>
+                <a href="#services"><div class="nav-button">USŁUGI</div></a>
+                <a href="#"><div class="nav-button">CENNIK</div></a>
+                <a href="#section-about_us"><div class="nav-button">O NAS</div></a>
+                <a href="#contactus"><div class="nav-button">KONTAKT</div></a>
+                <a href="#"><div class="nav-button primary-color-text"><span><i class="fa-solid fa-phone"></i> 777-666-999</span></div></a>
+  
+                <div class="nav-button primary-color-bg language-dropdown"> PL <i class="fa-solid fa-caret-down"></i>
+                  <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('DE')">DE</a>
+                  </div>
+                </div>
+                
+                <div class="hamburger-btn">
+                  <div class="hamburger-lane"></div>
+                  <div class="hamburger-lane"></div>
+                  <div class="hamburger-lane"></div>
+                </div>
+              -->
+                <!-- ################################## color theme switch ####################################  -->
+                <!-- <button aria-label="Theme switch">
+                  <span></span>
+                  <div class="icon"></div>
+                </button> -->
+                <!-- <a href="#"><div class="nav-button primary-color-bg"> PL <i class="fa-solid fa-caret-down"></i> </div></a> -->
+            <!-- </nav> -->
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="language-select">
+            <span>
+              PL
+            </span>
+            <div class="collapse-arrow">
+              <img src="img/Polygon.png">
+            </div>
           </div>
-          <div id="hamburger-btn" type="button">
-            <div class="hamburger-lane"></div>
-            <div class="hamburger-lane"></div>
-            <div class="hamburger-lane"></div>
+          <div class="navbar-right">
+            <nav class="hidden-nav">
+              <a href="#widgets"><div class="nav-button">USŁUGI</div></a>
+              <a href="#"><div class="nav-button">CENNIK</div></a>
+              <a href="#about_us"><div class="nav-button">O NAS</div></a>
+              <a href="#contact"><div class="nav-button">KONTAKT</div></a>
+              <a href="#"><div class="nav-button primary-color-text phone-box"><span><i class="fa-solid fa-phone"></i></span><p>777-666-999</p></div></a>
+            </nav>
+            <div class="mobile-btns">
+              <div class="phone-btn">
+              <img src="img/phone.png">
+            </div>
+            <div class="hamburger-btn">
+              <div class="hamburger-lane"></div>
+              <div class="hamburger-lane"></div>
+              <div class="hamburger-lane"></div>
+            </div>
+            </div>
           </div>
           <nav id="menu">
             <ul>
@@ -48,15 +104,20 @@
           </nav>
         </div>
       </div>
-    </nav>
-    <div class="logo-mobile">
-      <img src="img/icon-dark_theme.png">
-    </div>
+      <div class="logo-mobile">
+        <img src="img/icon-dark_theme.png">
+      </div>
+    </header>
+  
+    <main>
+          
     <div class="slider-mobile showUp">
+      
         <div class="slider-images">
           <img class="active mobile-slide" src="img/Carousel_mobile/banner1.png"  decoding="async" alt="women with tablet" loading="eager">
           <img class="mobile-slide" src="img/Carousel_mobile/banner2.png" decoding="async" alt="women with tablet">
           <img class="mobile-slide" src="img/Carousel_mobile/banner3.png" decoding="async" alt="women with tablet">
+          
         </div>
         <div class="headers-mobile showUp">
           <h1 id="main-header">PROFESJONALNE<br>USŁUGI KSIĘGOWE<br><span style="color:white">DLA TWOJEGO BIZNESU</span></h1>  
@@ -86,58 +147,60 @@
         <div class="widget-box widget-box--secondary widgets-box--1">
           <div>
             <div>
-                <div class="icon-holder">
-                  <img class="widget-icon" src="img/icons resized/product-box-5.png " alt="ikona księgowośći">
-                </div>
+              <div>
+                  <div class="icon-holder">
+                    <img class="widget-icon" src="img/icons resized/product-box-5.png " alt="ikona księgowośći">
+                  </div>
+              </div>
+              <h3>KSIĘGOWOŚĆ</h3>
+            </div>  
+          </div>
+          <div class="widget-box widget-box--primary widgets-box--2" alt="ikona administracji">
+            <div class="widget-content">
+              <div class="icon-holder">
+                <img class="widget-icon" src="img/icons resized/product-box-4.png ">
+              </div>
+              <h3>ADMINISTRACJA</h3>
             </div>
-            <h3>KSIĘGOWOŚĆ</h3>
-          </div>  
-        </div>
-        <div class="widget-box widget-box--primary widgets-box--2" alt="ikona administracji">
-          <div class="widget-content">
+          </div>
+          <div class="widget-box widget-box--primary widgets-box--3">
+            <div class="widget-content">
+              <div class="icon-holder">
+                <img class="widget-icon" src="img/icons resized/product-box-3.png" alt="ikona podatków">
+              </div>
+              <h3>PODATKI</h3>
+            </div>
+          </div>
+          <div class="widget-box widget-box--secondary widgets-box--4">
+            <div class="widget-content">
+              <div class="icon-holder">
+                <img class="widget-icon" src="img/icons resized/product-box-2.png" alt="ikona usług biurowych">
+              </div>
+              <h3>USŁUGI<br>BIUROWE</h3>
+            </div>
+          </div>
+          <div class="widget-box widget-box--secondary widgets-box--5">
+            <div>
+              <div class="icon-holder">
+                <img class="widget-icon" src="img/icons resized/product-box.png" alt="ikona analizy finansowej">
+              </div>
+              <h3>ANALIZA<br>FINANSOWA</h3>
+            </div>
+          </div>
+          <div class="widget-box widget-box--primary widgets-box--6">
+            <div class="widget-content">
             <div class="icon-holder">
-              <img class="widget-icon" src="img/icons resized/product-box-4.png">
+              <img class="widget-icon" src="img/icons resized/product-box-1.png" alt="ikona doradztwa podatkowego">
             </div>
-            <h3>ADMINISTRACJA</h3>
+            <h3>DORADZTWO<br>KSIĘGOWE</h3>
+          </div>
+          </div>
+          <div class="widget-contact-box">
+            <h2>Nasza oferta to kompleksowa obsługa podatkowa i administracyjna</h2>
+            <button type="button">UMÓW KONSULTACJE</button>
           </div>
         </div>
-        <div class="widget-box widget-box--primary widgets-box--3">
-          <div class="widget-content">
-            <div class="icon-holder">
-              <img class="widget-icon" src="img/icons resized/product-box-3.png" alt="ikona podatków">
-            </div>
-            <h3>PODATKI</h3>
-          </div>
-        </div>
-        <div class="widget-box widget-box--secondary widgets-box--4">
-          <div class="widget-content">
-            <div class="icon-holder">
-              <img class="widget-icon" src="img/icons resized/product-box-2.png" alt="ikona usług biurowych">
-            </div>
-            <h3>USŁUGI<br>BIUROWE</h3>
-          </div>
-        </div>
-        <div class="widget-box widget-box--secondary widgets-box--5">
-          <div>
-            <div class="icon-holder">
-              <img class="widget-icon" src="img/icons resized/product-box.png" alt="ikona analizy finansowej">
-            </div>
-            <h3>ANALIZA<br>FINANSOWA</h3>
-          </div>
-        </div>
-        <div class="widget-box widget-box--primary widgets-box--6">
-          <div class="widget-content">
-          <div class="icon-holder">
-            <img class="widget-icon" src="img/icons resized/product-box-1.png" alt="ikona doradztwa podatkowego">
-          </div>
-          <h3>DORADZTWO<br>KSIĘGOWE</h3>
-        </div>
-        </div>
-        <div class="widget-contact-box">
-          <h2>Nasza oferta to kompleksowa obsługa podatkowa i administracyjna</h2>
-          <button id="popoup-btn" type="button">UMÓW KONSULTACJE</button>
-        </div>
-      </div>
+            
       <article class="attributes">
         <div class="container">
           <div class="attribute-box">
@@ -230,6 +293,7 @@
               </div>
             </div>
           </div>
+      
         </div>
         <div class="companies">
             <div class="companies-header">
@@ -327,178 +391,169 @@
         </div>
       </div>
     </figure>
-    <!-- <section class="offer">
-      <div class="container">
-        <div class="offer-header">
-          <h1>SPRAWDŹ JAK DZIAŁAMY</h1>
-          <p>dowiedz się więcej o naszych usługach</p>
-        </div>
-        <h2></h2>
-        <div class="card">
-          <div class="card-icon">
-            <img src="img/icons/suitcase.png">
+
+      <section id="about_us" class="about">
+        <div class="experience-img">
+          <img src="img/experience.jpg" alt="ściskajace się ręce" loading="lazy">
+          <div class="text-overlay">
+            <h2><span style="color: #e7196a;">+ 6 lat</span><br> doświadczenia</h2>
           </div>
-          <h2>Księgowość</h2>
-          <ul class="card-list">
-            <li class="elem"><div class="elem-punctor"></div>lorem ipsum</li>
-            <li class="elem"><div class="elem-punctor"></div>lorem ipsum</li>
-            <li class="elem"><div class="elem-punctor"></div>lorem ipsum</li>
-            <li class="elem"><div class="elem-punctor"></div>lorem ipsum</li>
-          </ul>
-          <button>WIĘCEJ</button>
+          </img>
         </div>
-      </div>
-    </section> -->
-    <section class="about">
-      <div class="experience-img">
-        <img src="img/experience.jpg" alt="ściskajace się ręce" loading="lazy">
-        <div class="text-overlay">
-          <h2><span style="color: #e7196a;">+ 6 lat</span><br> doświadczenia</h2>
+        <div class="container">
+          <article class="about-text">
+            <h2 style="color: #e7196a;">Kim jesteśmy?</h2>
+            <p>Od 2018 roku prowadzimy biuro rachunkowe MDE, oferując usługi z zakresu księgowości, podatków i zarządzania. Nasz zespół certyfikowanych ekspertów, dzięki doświadczeniu i znajomości niemieckiego prawa podatkowego, skutecznie rozwiązuje problemy finansowe i administracyjne ale nie tylko. Pomagamy osobom przybyłym do Niemiec w formalnościach związanych z adaptacją. Nieustannie podnosimy kwalifikacje, by zapewniać aktualną wiedzę z zakresu rachunkowości, podatków, kadr i płac. Naszym celem jest profesjonalne wsparcie w kontaktach z urzędami i instytucjami.</p>
+          </article>
         </div>
-        </img>
+      </section>
+      <section id="team" class="team">
+        <div class="team-container">
+          <h2 class="team-header">
+            Poznaj<br><span style="color: #e7196a;">NASZ ZESPÓŁ</span>
+          </h2>
+          <div class="person-box">
+            <div class="person-img person-img--magda" aria-label="fotografia właścicela"></div>
+            <div class="person-description">
+              <h2 class="person-name">Magdalena<br>Deperas-Ertle</h2>
+              <p>Posiadam doświadczenie w księgowości, podatkach oraz wynagrodzeniach, biegle posługując się językiem polskim i niemieckim. Ukończyłam studia na Wyższej Szkole Bankowej w Bydgoszczy na kierunku Rachunkowość. Dodatkowo zdobyłam kwalifikacje w Steuerberaterkammer München, uzyskując tytuły w obszarze Steuerfach (specjalista ds. podatków) oraz Finanzbuchhalter (księgowy finansowy).</p>
+            </div>
+           </div>
+          <div class="person-box">
+            <div class="person-img person-img--robert" aria-label="fotografia właścicela"></div>
+            <div class="person-description">
+              <h2 class="person-name">Robert Ertle</h2>
+              <p>Specjalizuję się w księgowości i zarządzaniu, biegle posługując się językiem niemieckim i angielskim. Ukończyłem Verwaltungsschule Baden-Württemberg i zdobyłem doświadczenie w zakładaniu działalności gospodarczej w Gemeindetags in Stuttgart. Rozszerzyłem także swoje kwalifikacje jako Finanzbuchhalter, kończąc kurs w WBS TRAINING Weiterbildung w Ulm.</p>
+            </div>
+          </div>
       </div>
-      <div class="container">
-        <article class="about-text">
-          <h2 style="color: #e7196a;">Kim jesteśmy?</h2>
-          <p>Od 2018 roku prowadzimy biuro rachunkowe MDE, oferując usługi z zakresu księgowości, podatków i zarządzania. Nasz zespół certyfikowanych ekspertów, dzięki doświadczeniu i znajomości niemieckiego prawa podatkowego, skutecznie rozwiązuje problemy finansowe i administracyjne ale nie tylko. Pomagamy osobom przybyłym do Niemiec w formalnościach związanych z adaptacją. Nieustannie podnosimy kwalifikacje, by zapewniać aktualną wiedzę z zakresu rachunkowości, podatków, kadr i płac. Naszym celem jest profesjonalne wsparcie w kontaktach z urzędami i instytucjami.</p>
-        </article>
-      </div>
-    </section>
-    <section class="team">
-      <div class="container">
-        <h2 class="team-header">
-          Poznaj<br><span style="color: #e7196a;">NASZ ZESPÓŁ</span>
-        </h2>
-        <div class="person-box">
-          <div class="person-img--magda" aria-label="fotografia właścicela"></div>
-          <h2 class="person-name">Magdalena<br>Deperas-Ertle</h2>
-          <p>Posiadam doświadczenie w księgowości, podatkach oraz wynagrodzeniach, biegle posługując się językiem polskim i niemieckim. Ukończyłam studia na Wyższej Szkole Bankowej w Bydgoszczy na kierunku Rachunkowość. Dodatkowo zdobyłam kwalifikacje w Steuerberaterkammer München, uzyskując tytuły w obszarze Steuerfach (specjalista ds. podatków) oraz Finanzbuchhalter (księgowy finansowy).</p>
-        </div>
-        <div class="person-box">
-          <div class="person-img--robert" aria-label="fotografia właścicela"></div>
-          <h2 class="person-name">Robert Ertle</h2>
-          <p>Specjalizuję się w księgowości i zarządzaniu, biegle posługując się językiem niemieckim i angielskim. Ukończyłem Verwaltungsschule Baden-Württemberg i zdobyłem doświadczenie w zakładaniu działalności gospodarczej w Gemeindetags in Stuttgart. Rozszerzyłem także swoje kwalifikacje jako Finanzbuchhalter, kończąc kurs w WBS TRAINING Weiterbildung w Ulm.</p>
-        </div>
-      </div>
-    </section>
-    <section class="contact">
-      <div class="container">
-        <h2>
-            <span style="color: #e7196a;">Chętnie pomożemy -</span><br>
-            Skontaktuj się z nami
-        </h2>
-        <div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>
+              <span style="color: #e7196a;">Chętnie pomożemy -</span><br>
+              Skontaktuj się z nami
+          </h2>
           <div>
-            <div class="contact-data">
-              <div class="contact-row">
-                <div class="contact-icon">
-                  <img src="img/contact icons/direct-icon.png" alt="ikona adresu" loading="lazy">
+            <div>
+              <div class="contact-data">
+                <div class="contact-row">
+                  <div class="contact-icon">
+                    <img src="img/contact icons/direct-icon.png" alt="ikona adresu" loading="lazy">
+                  </div>
+                  <div class="contact-text">
+                    <h2 class="contact-label">Znajdziesz nas tutaj</h2>
+                    <p class="contact-data">Hochstetterweg, 10A 89143 Blaubeuren</p>
+                  </div>
                 </div>
-                <div class="contact-text">
-                  <h2 class="contact-label">Znajdziesz nas tutaj</h2>
-                  <p class="contact-data">Hochstetterweg, 10A 89143 Blaubeuren</p>
+                <div class="contact-row">
+                  <div class="contact-icon">
+                    <img src="img/contact icons/phone-iconn.png" alt="ikona telefonu" loading="lazy">
+                  </div>
+                  <div class="contact-text">
+                    <h2 class="contact-label">Zadzwoń</h2>
+                    <p class="contact-data">Magdalena  01517 2921592</p>
+                  </div>
                 </div>
-              </div>
-              <div class="contact-row">
-                <div class="contact-icon">
-                  <img src="img/contact icons/phone-iconn.png" alt="ikona telefonu" loading="lazy">
-                </div>
-                <div class="contact-text">
-                  <h2 class="contact-label">Zadzwoń</h2>
-                  <p class="contact-data">Magdalena  01517 2921592</p>
-                </div>
-              </div>
-              <div class="contact-row">
-                <div class="contact-icon">
-                  <img src="img/contact icons/email-icon.png" alt="ikona adresu mailowego" loading="lazy">
-                </div>
-                <div class="contact-text">
-                  <h2 class="contact-label">Masz pytania?</h2>
-                  <p class="contact-data">magdalena@mde-bueroservice.de</p>
+                <div class="contact-row">
+                  <div class="contact-icon">
+                    <img src="img/contact icons/email-icon.png" alt="ikona adresu mailowego" loading="lazy">
+                  </div>
+                  <div class="contact-text">
+                    <h2 class="contact-label">Masz pytania?</h2>
+                    <p class="contact-data">magdalena@mde-bueroservice.de</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div id="ilustration-mde">
+              <img src="img/contact icons/mde-illustration.png"  alt="logotyp mde" loading="lazy">
+            </div>
           </div>
-          <div id="ilustration-mde">
-            <img src="img/contact icons/mde-illustration.png"  alt="logotyp mde" loading="lazy">
+          <div class="contact-illustration">
           </div>
         </div>
-        <div class="contact-illustration">
+      </section>
+
+      <section class="form">
+        <div class="title-container" >
+          <h2>@</h2>
+          <h4>Czekamy na Twoją wiadomość</h4>
+            <h2><span>Napisz do nas</span></h2>
         </div>
-      </div>
-    </section>
-    <section class="form">
-      <div class="container">
-        <div class="sticky-note">
+        <div class="form-container">
+          <div class="sticky-note">
+          </div>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Imie</label>
+              <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Adres mail</label>
+              <input type="email" id="email" name="email" placeholder="Wpisz swojego maila" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Temat</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected hidden>Wybierz temat</option>
+                <option value="ksiegowosc">Księgowość</option>
+                <option value="podatki">Podatki</option>
+                <option value="uslugi-biurowe">Usługi biurowe</option>
+                <option value="analiza-finansowa">Analiza finansowa</option>
+                <option value="doradztwo-ksiegowe">Doradztwo księgowe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Wiadomość</label>
+              <textarea id="message" name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Wyślij</button>
+          </form>
         </div>
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Imie</label>
-            <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Adres mail</label>
-            <input type="email" id="email" name="email" placeholder="Wpisz swojego maila" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Temat</label>
-            <select id="subject" name="subject" required>
-              <option value="" disabled selected hidden>Wybierz temat</option>
-              <option value="ksiegowosc">Księgowość</option>
-              <option value="podatki">Podatki</option>
-              <option value="uslugi-biurowe">Usługi biurowe</option>
-              <option value="analiza-finansowa">Analiza finansowa</option>
-              <option value="doradztwo-ksiegowe">Doradztwo księgowe</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Wiadomość</label>
-            <textarea id="message" name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Wyślij</button>
-        </form>
-      </div>
-    </section>
+      </section>
+    </main>
+        
     <footer>
-      <div class="container">
-        <div>
-          
+      <div class="footer-box">        
           <div class="footer-symbols">
-            <div class="symbols-data">
+            <a href="https://maps.app.goo.gl/XL6jxhQg3uoF4p9H6" target="_blank" rel="noopener noreferrer" class="symbols-data">
+              
               <img src="img/footer/symbols/adress.png" alt="adress icon" loading="lazy">
               <div>
-                <p>Hochstetterweg 10A<br></p>
-                <p>89143 Blaubeuren</p>
+                <p>Hochstetterweg 10A<br>89143 Blaubeuren</p>
               </div>
-            </div>
+            </a>
+            
             <div class="symbols-data">
               <img src="img/footer/symbols/phone-symbol.png" alt="phone icon" loading="lazy">
               <div>
-                <p>01517 2921592<br></p>
-                <p>01766 4813719</p>
+                <p>01517 2921592<br>01766 4813719</p>
               </div>  
             </div>
+            
             <div class="symbols-data">
               <img src="img/footer/symbols/envelope.png" alt="envelope icon" loading="lazy">
               <div>
-                <p>magdalena@mde-bueroservice.de<br></p>
-                <p>robert@mde-bueroservice.de</p>
+                <p>magdalena@mde-bueroservice.de<br>robert@mde-bueroservice.de</p>
               </div>
             </div>
+            
           </div>
           <div class="logo-mobile--footer">
             <div class="footer-logos">
               <img src="img/footer-logo.png">
-              <div>
+              <div class="socials">
                 <a class="sc-logo"x><img src="img/footer/Social Media/Facebook.jpg" alt="facebook icon" loading="lazy"></a>
                 <a class="sc-logo"><img src="img/footer/Social Media/Whatsapp.jpg" alt="whatsapp icon" loading="lazy"></a>
               </div>
             </div>
           </div>
-        </div>
       </div>
-             
     </footer>
+        
+  </div>
+      
     <script src="https://unpkg.com/countup.js@1.9.3/dist/countUp.min.js"></script>
     <script src="./js/main.js" defer></script>
     <script type="application/ld+json">
@@ -517,6 +572,5 @@
         "email": "magdalena@mde-bueroservice.de"
       }
       </script>
-
 </body>
 </html>
