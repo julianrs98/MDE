@@ -42,7 +42,7 @@
     button {
         margin-top: 40px;
         width: 100%;
-        height: 50px;
+        height: auto;
     }
     span {
         color: $primary-color;
@@ -115,6 +115,25 @@
     transform: translateX(0);
   }
 
+  @media  (min-width: 1440px) {
 
-  
+    .widgets {
+        min-height: auto;
+        .widgets-container {
+            width: 100%;
+            grid-template-columns: repeat(4, 1fr); /* 3 + 1 dla div7 */
+            grid-template-rows: repeat(2, 1fr);
+
+            .widget-contact-box {
+                grid-area: 1 / 4 / 3 / 5;
+                button {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    
+
+  }
 

@@ -33,6 +33,8 @@
       </div>
     </div>
     <header>
+
+<!--
       <div class="logo">
               <a href="javascript:location.reload();">
                 <img src="./img/icon-dark_theme.png" alt="MDE logo">
@@ -40,7 +42,7 @@
             </div>
             <nav>
                 <a href="#services"><div class="nav-button">USŁUGI</div></a>
-                <!-- <a href="#"><div class="nav-button">CENNIK</div></a> -->
+                <a href="#"><div class="nav-button">CENNIK</div></a>
                 <a href="#section-about_us"><div class="nav-button">O NAS</div></a>
                 <a href="#contactus"><div class="nav-button">KONTAKT</div></a>
                 <a href="#"><div class="nav-button primary-color-text"><span><i class="fa-solid fa-phone"></i> 777-666-999</span></div></a>
@@ -56,16 +58,15 @@
                   <div class="hamburger-lane"></div>
                   <div class="hamburger-lane"></div>
                 </div>
+              -->
                 <!-- ################################## color theme switch ####################################  -->
                 <!-- <button aria-label="Theme switch">
                   <span></span>
                   <div class="icon"></div>
                 </button> -->
                 <!-- <a href="#"><div class="nav-button primary-color-bg"> PL <i class="fa-solid fa-caret-down"></i> </div></a> -->
-            </nav>
-
-<!-- 
-      <nav class="navbar">
+            <!-- </nav> -->
+      <div class="navbar">
         <div class="navbar-container">
           <div class="language-select">
             <span>
@@ -76,7 +77,15 @@
             </div>
           </div>
           <div class="navbar-right">
-            <div class="phone-btn">
+            <nav class="hidden-nav">
+              <a href="#widgets"><div class="nav-button">USŁUGI</div></a>
+              <a href="#"><div class="nav-button">CENNIK</div></a>
+              <a href="#about_us"><div class="nav-button">O NAS</div></a>
+              <a href="#contact"><div class="nav-button">KONTAKT</div></a>
+              <a href="#"><div class="nav-button primary-color-text phone-box"><span><i class="fa-solid fa-phone"></i></span><p>777-666-999</p></div></a>
+            </nav>
+            <div class="mobile-btns">
+              <div class="phone-btn">
               <img src="img/phone.png">
             </div>
             <div class="hamburger-btn">
@@ -84,13 +93,14 @@
               <div class="hamburger-lane"></div>
               <div class="hamburger-lane"></div>
             </div>
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
       <div class="logo-mobile">
         <img src="img/icon-dark_theme.png">
       </div>
-  -->
+
     </header>
     <main>
       <div class="slider-mobile ">
@@ -105,7 +115,7 @@
           <div class="square"></div>
         </div>
       </div>
-      <section class="widgets">
+      <section id="widgets" class="widgets">
         <div class="container widgets-container">
           <div class="widget-box widget-box--secondary widgets-box--1">
             <div>
@@ -224,7 +234,7 @@
           </div>
         </div>
       </section> -->
-      <section class="about">
+      <section id="about_us" class="about">
         <div class="experience-img">
           <img src="img/experience.jpg" alt="ściskajace się ręce">
           <div class="text-overlay">
@@ -239,7 +249,7 @@
           </article>
         </div>
       </section>
-      <section class="team">
+      <section id="team" class="team">
         <div class="team-container">
           <h2 class="team-header">
             Poznaj<br><span style="color: #e7196a;">NASZ ZESPÓŁ</span>
@@ -260,7 +270,7 @@
           </div>
       </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="container">
           <h2>
               <span style="color: #e7196a;">Chętnie pomożemy -</span><br>
