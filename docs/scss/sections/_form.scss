@@ -1,0 +1,68 @@
+.form {
+    padding: 40px 0;
+    background-image: url(../img/form/form-secton.jpg);
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+}
+
+
+.form-group {
+    label {
+        display: inline;
+        position: absolute !important;
+        width: 1px; 
+        height: 1px; 
+        padding: 0; 
+        margin: -1px; 
+        overflow: hidden; 
+        clip: rect(0, 0, 0, 0); 
+        white-space: nowrap; 
+        border: 0;
+    }
+    input, select, textarea {
+        width: 100%;
+        height: 53px;
+        padding: 10px 10px;
+        border: 5px solid $primary-color;
+        margin-bottom: 20px;
+    }
+    input::placeholder {
+        color: $secondary-color;
+        
+    }
+    select {
+        width: 100%;
+        height: 53px;
+        padding: 10px 10px;
+        border: 5px solid $primary-color;
+        position: relative; // dla bezpieczeństwa
+        z-index: 1;
+      
+        &:focus {
+          border-color: darken($primary-color, 10%);
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px 10px;
+        border: 5px solid #e7196a;
+        background-color: #fff;
+        color: #000;
+        outline: none;
+        resize: vertical;
+    
+        &:focus {
+          border-color: darken($primary-color, 10%);
+        }
+    
+        &::placeholder {
+          color: $secondary-color;
+        }
+      }
+}
+
+.submit-btn {
+    width: 100%;
+}

@@ -1,0 +1,82 @@
+.experience-img {
+    width: 100%;
+    position: relative;
+    display: inline-block; // Dopasowanie do obrazka
+    margin: 0 auto;
+    img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .text-overlay {
+        position: relative;
+        font-size: 100px;
+        text-align: center;
+        color: white; // Dostosuj kolor
+        font-weight: bold;
+        display: flex;
+        flex-direction: column; // Układa spany jeden pod drugim
+        justify-content: center;
+        align-items: center;
+        gap: 5px; // Odstęp między spanami
+    }
+    .text-overlay h2 {
+        font-size: 40px;
+        font-weight: 500;
+        position: absolute;
+    }
+    .text-overlay h1:first-child {
+        color: $primary-color;
+        line-height: 5px;
+    }
+}
+
+.about-text {
+    padding: 35px 0px;
+    h1 {
+        margin-bottom: 20px;
+        color: $primary-color;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .about {
+        display: flex;
+        align-items: center;
+        .container {
+            padding: 0;
+        }
+        &-text {
+            padding: 25px;
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+    .experience-img {
+        width: 70%;
+        order: 2;
+        img {
+            margin: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .about {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    .experience-img {
+        width: 70%;
+        order: 2;
+        img {
+            margin: 0;
+            max-width: 495px;
+        }
+    }
+}

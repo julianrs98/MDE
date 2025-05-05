@@ -1,0 +1,139 @@
+.contact {
+    padding: 40px 0;
+}
+
+.contact-title-bar {
+  background-color: $primary-color;
+}
+
+.contact-row {
+    display: flex;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.contact-icon {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    background-color: $primary-color;
+    .holder {
+        width: 60%;
+    }
+}
+
+.contact-label {
+    color: $primary-color;
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* ← ZABRONI ściskania */
+    background-color: #e7196a;
+    img {
+        width: 40%;
+    }
+}
+
+.contact-text {
+    flex-grow: 1; /* ← pozwól tekstowi rozciągnąć się, ale tylko on */
+}
+
+.contact-illustration {
+    width: 80%;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+      display: none; // ukryte, ale obecne dla dostępności
+    }
+
+    input,
+    textarea {
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ff008c; // różowa ramka
+      border-radius: 4px;
+      background-color: #ffffff;
+      color: #000000;
+      outline: none;
+
+      &:focus {
+        border-color: #e7196a;
+        box-shadow: 0 0 5px rgba(231, 25, 106, 0.5);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .submit-btn {
+    align-self: flex-end;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #e7196a, #c20063);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(90deg, #c20063, #a10057);
+    }
+  }
+}
+  
+
+
+#ilustration-mde {
+  display: none;
+  margin-left: 70px;
+}
+
+// TABLET MEDIA QUARIES
+
+
+@media  (min-width: 768px) {
+  .contact > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #ilustration-mde {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 200px;
+    }
+  }
+}
