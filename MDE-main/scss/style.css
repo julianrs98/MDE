@@ -135,11 +135,7 @@ h2 {
   }
 }
 header {
-  max-height: 20vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
 }
 header .logo {
   width: 15%;
@@ -152,12 +148,6 @@ header nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding-right: 3rem;
-  /* Dropdown */
-  /* Zawartość dropdown (ukryta na start) */
-  /* Styl elementu w dropdownie */
-  /* Styl po najechaniu */
-  /* Pokazuje dropdown na hover */
 }
 header nav .primary-color-bg {
   background-color: #e7196a;
@@ -180,20 +170,31 @@ header nav a .nav-button {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2rem;
-  margin-right: 2rem;
   text-align: center;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   position: relative;
   color: var(--darktheme-text-color);
 }
-header nav a .nav-button span {
+header nav a .nav-button .phone-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header nav a .nav-button span, header nav a .nav-button p {
   color: #e7196a;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+header nav a .nav-button p {
+  display: none;
 }
 header nav a .nav-button:hover {
   color: #e7196a;
 }
-header nav .language-dropdown {
+header nav Dropdown .language-dropdown {
   position: relative;
 }
 header nav .dropdown-content {
@@ -207,7 +208,7 @@ header nav .dropdown-content {
   z-index: 1;
   border-radius: 4px;
 }
-header nav .dropdown-content a {
+header nav Styl elementu w dropdownie .dropdown-content a {
   color: rgb(255, 255, 255);
   padding: 15px 20px;
   text-decoration: none;
@@ -216,11 +217,11 @@ header nav .dropdown-content a {
   background-color: #e7196a;
   font-weight: 700;
 }
-header nav .dropdown-content a:hover {
+header nav Styl po najechaniu .dropdown-content a:hover {
   background-color: #ff0c6d;
   color: #1e2248;
 }
-header nav .language-dropdown:hover .dropdown-content {
+header nav Pokazuje dropdown na hover .language-dropdown:hover .dropdown-content {
   display: block;
 }
 header nav button {
@@ -345,8 +346,7 @@ header nav button span {
   transition: all 0.4s ease;
 }
 
-/* Linie tworzące krzyżyk */
-.close-btn span:first-child {
+Linie tworzące krzyżyk .close-btn span:first-child {
   transform: rotate(45deg);
 }
 
@@ -354,8 +354,7 @@ header nav button span {
   transform: rotate(-45deg);
 }
 
-/* Animacja przy kliknięciu */
-.close-btn.clicked span:first-child {
+Animacja przy kliknięciu .close-btn.clicked span:first-child {
   transform: rotate(90deg) scale(1.2);
 }
 
@@ -364,14 +363,29 @@ header nav button span {
 }
 
 @media (min-width: 768px) {
-  header .slider-mobile > img {
+  header {
+    max-width: 1440px;
+  }
+  .slider-mobile > img {
     width: 768px;
     margin: 0 auto;
     text-align: center;
   }
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
-  min-height: 60vh;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 main #section-products {
   text-align: center;
@@ -427,7 +441,6 @@ main #section-about_us {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-height: 50vh;
 }
 main #section-about_us .about_us-text {
   width: 65%;
@@ -722,26 +735,41 @@ main #contactus .contactus-img img {
   width: 100%;
 }
 
+/*
+// TODO : 
+  sekcja kafelków ma być przy 1024 ma być tak jak u mnie.
+  sekcja napiszDoNas do zrobienia desktop od 1024
+  footer do poprawy
+*/
 footer {
+  width: 100%;
   padding: 40px 0px;
 }
-
-.footer-logos {
+footer .footer-box {
+  width: 100%;
+  padding: 5%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: start;
 }
-.footer-logos > img {
+
+.footer-symbols {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-symbols > img {
   margin-right: 20px;
 }
-.footer-logos img {
+.footer-symbols img {
   width: 176px;
 }
 
 .symbols-data {
   display: flex;
   align-items: center;
-  justify-content: start;
   margin-bottom: 20px;
 }
 .symbols-data p {
@@ -753,21 +781,26 @@ footer {
   margin-right: 10px;
 }
 
+.socials {
+  display: flex;
+  justify-content: space-around;
+}
+
 .sc-logo img {
   width: 35px;
 }
 
+.footer-logos img {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
-  .footer-logos {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-logos img {
-    margin-bottom: 20px;
-  }
-  footer > div > div {
-    display: flex;
-    align-self: center;
+  .footer-symbols {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
   }
 }
 .navbar {
@@ -781,6 +814,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navbar .navbar-container .hidden-nav {
+  display: none;
+}
+.navbar .navbar-container .mobile-btns {
+  display: flex;
 }
 .navbar .language-select {
   height: 46px;
@@ -825,6 +864,21 @@ footer {
   background-color: #e7196a;
 }
 
+@media (min-width: 768px) {
+  .navbar .navbar-container .mobile-btns {
+    display: none;
+  }
+  .navbar .navbar-container .hidden-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  header nav a .nav-button p {
+    display: block;
+  }
+}
 .hidden {
   display: none;
 }
@@ -1002,7 +1056,7 @@ button {
   background-color: #e7196a;
   color: white;
   border: none;
-  height: 45px;
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1060,6 +1114,7 @@ button {
   margin-top: 40px;
   width: 100%;
   min-height: 50px;
+
 }
 .widget-contact-box span {
   color: #e7196a;
@@ -1124,6 +1179,22 @@ button {
   transform: translateX(0);
 }
 
+@media (min-width: 1440px) {
+  .widgets {
+    min-height: auto;
+  }
+  .widgets .widgets-container {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); /* 3 + 1 dla div7 */
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .widgets .widgets-container .widget-contact-box {
+    grid-area: 1/4/3/5;
+  }
+  .widgets .widgets-container .widget-contact-box button {
+    height: auto;
+  }
+}
 .attribute-box {
   position: relative;
 }
@@ -1623,7 +1694,8 @@ button {
 }
 
 .team {
-  padding: 40px 0;
+  width: 100%;
+  padding: 40px 5%;
   background-image: url(../img/section-team.jpg);
   background-size: cover;
   background-position: top;
@@ -1643,9 +1715,9 @@ button {
   background-color: #1e2248;
   border: 7px solid #e7196a;
 }
-.person-box div {
+.person-box .person-img {
   width: auto;
-  height: 300px;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -1656,17 +1728,17 @@ button {
 
 .person-img--magda {
   width: 100%;
-  height: 200px;
   background-image: url(../img/magda.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: top;
 }
 
 .person-img--robert {
   width: 100%;
-  height: 200px;
   background-image: url(../img/robert.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -1684,11 +1756,66 @@ button {
     transform: translateX(55px);
   }
 }
+@media (min-width: 425px) {
+  .team {
+    padding: 40px 10%;
+  }
+  .person-img {
+    height: 300px;
+  }
+}
 @media (min-width: 780px) {
-  .person-box > div {
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .about .experience-img {
+    width: 50%;
+  }
+  .about .about-text {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .team-container {
+    padding: 40px 10%;
+  }
+  .person-img {
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .team-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .team-container .person-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .team-container .person-box .person-img {
+    width: 40%;
+    min-height: 250px;
+  }
+  .team-container .person-box .person-description {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .team {
+    padding: 40px 5%;
+  }
+  .team .team-container {
+    padding: 40px 0;
+  }
+  .team .team-container .person-box {
+    max-width: 700px;
   }
 }
 .contact {
@@ -1819,11 +1946,37 @@ button {
   }
 }
 .form {
-  padding: 40px 0;
+  width: 100%;
+  padding: 5%;
   background-image: url(../img/form/form-secton.jpg);
   background-size: cover;
   background-position: top;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.form .title-container {
+  width: 45%;
+  display: none;
+  background-color: #e7196a;
+  padding: 1%;
+  text-align: start;
+  line-height: normal;
+}
+.form .title-container h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.form .title-container h2 span {
+  color: #1e2248;
+  font-size: 3rem;
+}
+.form .title-container h4 {
+  font-size: 2rem;
+}
+.form .form-container {
+  width: 100%;
+  padding: 0 5%;
 }
 
 .form-group label {
@@ -1885,6 +2038,23 @@ button {
 .submit-btn {
   width: 100%;
 }
+
+@media (min-width: 1024px) {
+  .form .title-container {
+    display: block;
+  }
+  .form .form-container {
+    width: 50%;
+    padding: 0;
+  }
+  .form .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form-container form button {
+    max-width: 220px;
+    align-self: flex-end;
+  }
 
 .popup {
   display: none;

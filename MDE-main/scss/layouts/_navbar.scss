@@ -8,6 +8,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        .hidden-nav {
+            display: none;
+        }
+        .mobile-btns {
+            display: flex;
+        }
     }
     .language-select {
         height: 46px;
@@ -52,6 +59,24 @@
         }
     }
 }
+
+@media  (min-width: 768px) {
+
+    .navbar .navbar-container  {
+        .mobile-btns {
+            display: none;
+        }
+        .hidden-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}
+@media  (min-width: 1024px) {
+    header nav a .nav-button p {
+        display: block;
+    }
 
   .hidden {
     display: none;

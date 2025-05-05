@@ -1,11 +1,6 @@
-
 header {
-    max-height: 20vh;
-    // border: 1px solid red;
-    padding: $spacing-unit;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+
     .logo {
         // border: 1px solid rgb(0, 34, 255);
         width: 15%;
@@ -20,7 +15,6 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        padding-right: 3rem;
         
         .primary-color-bg {
           background-color: $primary-color;
@@ -46,15 +40,26 @@ header {
               font-weight: 700;
               font-size: 2rem;
               // @include border(green);
-              margin-right: 2rem;
               text-align: center; 
               cursor: pointer;
-              display: inline-block;
+              display: flex;
               position: relative;
               color: var(--darktheme-text-color);
-                span {
+              .phone-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+              }
+                span, p{
                   color: $primary-color;
-                }            
+                  display: flex;
+                  flex-direction: row;
+                  margin: 0;
+                }
+                p {
+                  display: none;
+                }         
             }
             .nav-button:hover {
                 color: $primary-color;
@@ -62,12 +67,12 @@ header {
 
         }
 
-              /* Dropdown */
+               Dropdown 
       .language-dropdown {
         position: relative;
       }
 
-      /* Zawartość dropdown (ukryta na start) */
+      //  Zawartość dropdown (ukryta na start) 
       .dropdown-content {
         display: none;
         position: absolute;
@@ -80,7 +85,7 @@ header {
         border-radius: 4px;
       }
 
-      /* Styl elementu w dropdownie */
+       Styl elementu w dropdownie 
       .dropdown-content a {
         color: rgb(255, 255, 255);
         padding: 15px 20px;
@@ -91,13 +96,13 @@ header {
         font-weight: 700;
       }
 
-      /* Styl po najechaniu */
+      Styl po najechaniu 
       .dropdown-content a:hover {
         background-color: $primary-color-dark;
         color: $secondary-color;
       }
 
-      /* Pokazuje dropdown na hover */
+      Pokazuje dropdown na hover 
       .language-dropdown:hover .dropdown-content {
         display: block;
       }
@@ -141,7 +146,6 @@ header {
     }
 }
 
-
 // mobile styles
 
 .logo-mobile {
@@ -161,9 +165,9 @@ header {
     display: inline-block;
     width: auto;
     transform: translate(-7
-    
     5px, 0);  
   }
+
   .headers-mobile {
     position: absolute;
     top: 15%;
@@ -198,7 +202,6 @@ header {
   }
 }
 
-
 #overlay-widgets {
   position: fixed;
   top: 0;
@@ -210,9 +213,6 @@ header {
   transition: opacity 0.3s ease;
   opacity: 1;
 }
-
-
-
 
 .close-btn {
   position: absolute;
@@ -237,7 +237,7 @@ header {
   transition: all 0.4s ease;
 }
 
-/* Linie tworzące krzyżyk */
+ Linie tworzące krzyżyk 
 .close-btn span:first-child {
   transform: rotate(45deg);
 }
@@ -246,7 +246,7 @@ header {
   transform: rotate(-45deg);
 }
 
-/* Animacja przy kliknięciu */
+ Animacja przy kliknięciu 
 .close-btn.clicked span:first-child {
   transform: rotate(90deg) scale(1.2);
 }
@@ -259,7 +259,9 @@ header {
 // ***********TABLET MEDIA QUARIES************
 
 @media  (min-width: 768px) {
-  header
+  header{
+  max-width: 1440px;
+  }
   .slider-mobile  > img {
       width: 768px;
       margin: 0 auto;
