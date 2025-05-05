@@ -29,10 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     { header: "Administracja", paragraph: "Świadczymy profesjonalne usługi administracyjne, wspierając klientów w codziennym zarządzaniu dokumentacją i procesami biurowymi. Oferujemy pomoc w rejestracji oraz wyrejestrowaniu pracowników, prowadzeniu akt osobowych oraz przygotowywaniu zgłoszeń do urzędów i instytucji ubezpieczeniowych. Nasze wsparcie administracyjne obejmuje również obsługę formalności związanych z prowadzeniem działalności gospodarczej w Niemczech, co pozwala klientom skupić się na rozwoju biznesu." }, // Poprawiłem literówkę: Admnistracja -> Administracja
     { header: "Podatki", paragraph: "Oferujemy pełne wsparcie w zakresie rozliczeń podatkowych dla firm i osób prywatnych. Przygotowujemy i składamy roczne deklaracje podatkowe zgodnie z obowiązującymi przepisami w Polsce i Niemczech. Nasze doświadczenie pozwala na rzetelną analizę sytuacji podatkowej klienta i optymalne przygotowanie dokumentacji, co przekłada się na pewność i bezpieczeństwo w kontaktach z urzędami skarbowymi." },
     { header: "Usługi biurowe", paragraph: "Zapewniamy wsparcie w prowadzeniu prywatnej i biznesowej korespondencji, w tym obsługę kontaktów z urzędami skarbowymi, kasami chorych oraz innymi instytucjami. Przygotowujemy wymagane dokumenty, wnioski i zgłoszenia zgodnie z obowiązującymi standardami, dbając o pełną poufność i terminowość. Nasze wsparcie biurowe to wygodne rozwiązanie dla przedsiębiorców ceniących sprawną organizację procesów administracyjnych." },
-    { header: "Doradztwo księgowe", paragraph: "Oferujemy indywidualne doradztwo księgowe dla firm, dostosowane do potrzeb i specyfiki działalności klienta. Wspieramy w bieżących kwestiach rachunkowych, interpretacji przepisów podatkowych oraz optymalizacji rozwiązań księgowych. Dzięki naszej wiedzy i doświadczeniu pomagamy firmom sprawnie zarządzać finansami i dostosowywać się do zmieniających się wymagań prawnych." },
-    { header: "Analiza finansowa", paragraph: "Opracowujemy sprawozdania finansowe oraz przygotowujemy zestawienia sald i oceny wyników finansowych firm działających w Polsce i Niemczech. Tworzymy analizy BWA (oceny biznesowe), które umożliwiają skuteczne monitorowanie kondycji przedsiębiorstwa oraz wspierają podejmowanie świadomych decyzji biznesowych. Wszystkie nasze opracowania są zgodne z aktualnymi standardami rachunkowości i dostosowane do indywidualnych potrzeb klienta." },
+    { header: "Analiza finansowa", paragraph: "  Oferujemy indywidualne doradztwo księgowe dla firm, dostosowane do potrzeb i specyfiki działalności klienta. Wspieramy w bieżących kwestiach rachunkowych, interpretacji przepisów podatkowych oraz optymalizacji rozwiązań księgowych. Dzięki naszej wiedzy i doświadczeniu pomagamy firmom sprawnie zarządzać finansami i dostosowywać się do zmieniających się wymagań prawnych." },
+    { header: "Doradztwo księgowe", paragraph: "  Opracowujemy sprawozdania finansowe oraz przygotowujemy zestawienia sald i oceny wyników finansowych firm działających w Polsce i Niemczech. Tworzymy analizy BWA (oceny biznesowe), które umożliwiają skuteczne monitorowanie kondycji przedsiębiorstwa oraz wspierają podejmowanie świadomych decyzji biznesowych. Wszystkie nasze opracowania są zgodne z aktualnymi standardami rachunkowości i dostosowane do indywidualnych potrzeb klienta." },
   ];
-
+  
+  
   let paragraphWidget = changeTextSection.querySelector('p');
   let headerWidget = changeTextSection.querySelector('h2');
 
@@ -386,7 +387,7 @@ openPopupBtn.addEventListener('click', function(){
 
 
 
-// Pasek z logotypami firm 
+// Pasek z logotypami firm
 const track = document.querySelector('.companies-track');
 const container = document.querySelector('.companies-logotypes');
 

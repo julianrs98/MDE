@@ -176,7 +176,7 @@
 // Sekcja z logotypami firm
 
 .companies {
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 30px;
     .companies-header {
         display: flex;
@@ -236,5 +236,16 @@
     }
     .number-row {
         display: inline-block;
+    }
+    .comment {
+        max-width: 650px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .opinions .number-row {
+        width: 80%;
+        margin: 0 auto;
     }
 }
