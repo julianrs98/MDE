@@ -11,27 +11,21 @@
     }
 
     .text-overlay {
+        position: relative;
         font-size: 100px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
         color: white; // Dostosuj kolor
         font-weight: bold;
         display: flex;
         flex-direction: column; // Układa spany jeden pod drugim
+        justify-content: center;
+        align-items: center;
         gap: 5px; // Odstęp między spanami
-        opacity: 0;
-        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    }
-    &.in-view .text-overlay {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
     }
     .text-overlay h2 {
         font-size: 40px;
         font-weight: 500;
+        position: absolute;
     }
     .text-overlay h1:first-child {
         color: $primary-color;
@@ -44,5 +38,45 @@
     h1 {
         margin-bottom: 20px;
         color: $primary-color;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .about {
+        display: flex;
+        align-items: center;
+        .container {
+            padding: 0;
+        }
+        &-text {
+            padding: 25px;
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+    .experience-img {
+        width: 70%;
+        order: 2;
+        img {
+            margin: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .about {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    .experience-img {
+        width: 70%;
+        order: 2;
+        img {
+            margin: 0;
+            max-width: 495px;
+        }
     }
 }
