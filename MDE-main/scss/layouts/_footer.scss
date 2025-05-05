@@ -1,14 +1,23 @@
 
 
 footer {
+    width: 100%;
     padding: 40px 0px;
+    .footer-box {
+      width: 100%;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
-  
 
-.footer-logos {
+.footer-symbols {
+  width: 100%;
+  padding: 5%;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  flex-direction: column;
+  justify-content: center;
   > img {
     margin-right: 20px;
   }
@@ -20,7 +29,6 @@ footer {
 .symbols-data {
   display: flex;
   align-items: center;
-  justify-content: start;
   margin-bottom: 20px;
   p {
     margin-bottom: 0rem;
@@ -32,26 +40,30 @@ footer {
   margin-right: 10px;
 }
 
-
-
+.socials {
+  display: flex;
+  justify-content: space-around;
+}
 .sc-logo img {
   width: 35px;
+}
+.footer-logos img {
+  margin-bottom: 20px;
 }
 
 
 // TABLET MEDIA QUARIES
 
+@media (min-width: 480px) {
+  
+}
 
 @media  (min-width: 768px) {
-  .footer-logos {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-logos img {
-    margin-bottom: 20px;
-  }
-  footer > div > div {
-    display: flex;
-    align-self: center;
+  .footer-symbols {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
   }
 }

@@ -1,11 +1,23 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 main {
-  min-height: 60vh;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   // @include border(red);
 
   #section-products {
     text-align: center;
     margin-top: 4rem;
+
     h1 {
       color: $secondary-color;
       font-weight: 700;
@@ -69,11 +81,11 @@ main {
 
 
   // ########################  About Us section #############################
+
   #section-about_us {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-height: 50vh;
     .about_us-text {
       width: 65%;
       align-self: center;
@@ -403,3 +415,9 @@ main {
   }
 
 }
+ /*
+// TODO : 
+  sekcja kafelków ma być przy 1024 ma być tak jak u mnie.
+  sekcja napiszDoNas do zrobienia desktop od 1024
+  footer do poprawy
+*/

@@ -1,9 +1,36 @@
 .form {
-    padding: 40px 0;
+  width: 100%;
+    padding: 5%;
     background-image: url(../img/form/form-secton.jpg);
     background-size: cover;
     background-position: top;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    .title-container {
+      width: 45%;
+      display: none;
+      background-color: $primary-color;
+      padding: 1%;
+      text-align: start;
+      line-height: normal;
+      h2 {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        span {
+          color: $secondary-color;
+          font-size: 3rem;
+        }
+      }
+      h4 {
+        font-size: 2rem;
+      }
+    }
+    .form-container {
+      width: 100%;
+      padding: 0 5%;
+    }
 }
 
 
@@ -65,4 +92,26 @@
 
 .submit-btn {
     width: 100%;
+}
+
+
+@media  (min-width: 1024px) {
+
+  .form { 
+    .title-container {
+      display: block;
+    }
+    .form-container {
+      width: 50%;
+      padding: 0;
+      form {
+        display: flex;
+        flex-direction: column;
+        button {
+        max-width: 220px;
+        align-self: flex-end;
+      }
+      }
+    }
+  }
 }
