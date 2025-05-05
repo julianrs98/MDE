@@ -1,0 +1,65 @@
+
+@import 'variables';
+
+:root {
+  --bs-secondary-color: #c5608800;
+  --bg-color: $secondary-color;
+  --bg-opacity: 0.1;
+  --darktheme-text-color: #fff;
+  --darktheme-bg-color: #1e2248;
+}  
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  max-width: 100vw;
+  font-family: "Kanit", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: $secondary-color;
+  color: #fff;
+  margin: 0 auto;  /* Usunięcie domyślnych marginesów */
+  overflow-x: hidden; /* Zapobieganie poziomemu przewijaniu */
+}
+
+
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/footer';
+@import 'layouts/navbar';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'sections/widgets';
+@import 'sections/opinions';
+@import 'sections/offer';
+@import 'animations';
+@import 'sections/experience';
+@import 'sections/team';
+@import 'sections/contact';
+@import 'sections/form';
+@import 'components/popup';
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,537 @@
+@charset "UTF-8";
+.kanit-regular {
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.primary-color-text, .primary-color-span {
+  color: #e7196a;
+}
+
+.primary-color-bg {
+  background-color: #e7196a;
+  color: #fff;
+}
+
+.secondary-color-bg {
+  background-color: #1e2248;
+  color: #e7196a;
+}
+
+p {
+  color: #fff;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #e7196a;
+  border: white;
+  color: white;
+  padding: 1.5rem 2rem;
+  font-weight: 600;
+  font-size: 2.1rem;
+  z-index: 100;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  background-color: #ff0c6d;
+  color: white;
+  z-index: 100;
+}
+
+.custom-carousel {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-carousel-slides {
+  width: 100%;
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  display: flex;
+}
+
+.custom-carousel-item {
+  min-width: 100%;
+  min-height: 60vh;
+  padding: 0 0 50px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-item-text {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  margin-left: 8%;
+}
+.carousel-item-text h1 {
+  font-size: 5rem;
+  color: var(--darktheme-text-color);
+  font-weight: 700;
+}
+.carousel-item-text h1 span {
+  color: #e7196a;
+}
+
+.carousel-item-img {
+  width: 60%;
+  height: 60vh;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+}
+.carousel-item-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.custom-carousel-prev, .custom-carousel-next {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgba(255, 255, 255, 0);
+  font-size: 2rem;
+  padding: 5rem;
+  cursor: pointer;
+}
+
+.custom-carousel-prev {
+  left: 1px;
+}
+
+.custom-carousel-next {
+  right: 1px;
+}
+
+.custom-carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  right: 10%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.custom-indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.custom-indicator.active {
+  background-color: #e7196a;
+  border: none;
+}
+
+header {
+  max-height: 20vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .logo {
+  width: 15%;
+}
+header .logo img {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 3rem;
+  /* Dropdown */
+  /* Zawartość dropdown (ukryta na start) */
+  /* Styl elementu w dropdownie */
+  /* Styl po najechaniu */
+  /* Pokazuje dropdown na hover */
+}
+header nav .primary-color-bg {
+  background-color: #e7196a;
+  color: white;
+  padding: 15px 20px;
+  font-weight: 700;
+  min-width: 75px;
+}
+header nav .primary-color-bg:hover {
+  background-color: #e7196a;
+  color: #1e2248;
+  cursor: pointer;
+}
+header nav a {
+  text-decoration: none;
+}
+header nav a .nav-button {
+  max-height: 80%;
+  padding: 1.5rem 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: var(--darktheme-text-color);
+}
+header nav a .nav-button span {
+  color: #e7196a;
+}
+header nav a .nav-button:hover {
+  color: #e7196a;
+}
+header nav .language-dropdown {
+  position: relative;
+}
+header nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e7196a;
+  min-width: 75px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+header nav .dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #e7196a;
+  font-weight: 700;
+}
+header nav .dropdown-content a:hover {
+  background-color: #ff0c6d;
+  color: #1e2248;
+}
+header nav .language-dropdown:hover .dropdown-content {
+  display: block;
+}
+header nav button {
+  background-color: #000;
+  border: solid 4px #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 6.5rem;
+  outline-width: 5px;
+  position: relative;
+  width: 12rem;
+  margin: 0 3rem;
+}
+header nav button .icon {
+  background-color: grey;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 4.3rem;
+  margin: 0.7rem 1rem;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 4.3rem;
+}
+header nav button .icon:hover {
+  background-color: rgb(176, 176, 176);
+}
+header nav button span {
+  bottom: 100%;
+  color: var(--color-main);
+  font-size: 20px;
+  left: 50%;
+  padding: 12px 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+main {
+  min-height: 60vh;
+}
+main #section-products {
+  text-align: center;
+  margin-top: 4rem;
+}
+main #section-products h1 {
+  color: #1e2248;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+main #section-products .key-words {
+  background-color: #e7196a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+main #section-products .key-words h2 {
+  color: #fff;
+  padding: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
+main #section-products .key-words h2 span {
+  font-weight: 900;
+  font-size: 4rem;
+}
+main #section-about_us {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-height: 50vh;
+}
+main #section-about_us .about_us-text {
+  width: 65%;
+  align-self: center;
+  padding: 5%;
+  font-weight: 500;
+}
+main #section-about_us .about_us-text h4 {
+  font-size: 3.4rem;
+  color: #e7196a;
+}
+main #section-about_us .about_us-img {
+  position: relative;
+  width: 35%;
+  height: inherit;
+  background-image: url(../img/hands.jpeg);
+  background-position: center;
+  background-size: 220%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #section-about_us .about_us-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2248;
+  z-index: 1;
+  opacity: 0.65;
+}
+main #section-about_us h2 {
+  color: #e7196a;
+  font-weight: 700;
+  font-size: 4.2rem;
+  z-index: 2;
+}
+main #services, main #services-extra {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/bulding-bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 7%;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+main #services::before, main #services-extra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2248;
+  z-index: -1;
+  opacity: 0.7;
+}
+main #services .services-container, main #services-extra .services-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main #services .services-container .services-cards, main #services-extra .services-container .services-cards {
+  width: 55%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main #services .services-container .services-cards .services-card, main #services-extra .services-container .services-cards .services-card {
+  width: 30%;
+  height: 18rem;
+  padding: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main #services .services-container .service-box, main #services-extra .services-container .service-box {
+  width: 40%;
+  height: 100%;
+  padding: 5% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 7px solid #e7196a;
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+  text-align: center;
+  background-color: #1e2248;
+}
+main #services-extra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main #services-extra h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+}
+main #services-extra p {
+  font-size: 4rem;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
+main .services-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #1e2248;
+}
+main .services-list .services-item {
+  min-width: 29%;
+  border: 8px solid #e7196a;
+  z-index: 2;
+  padding: 5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 3rem;
+  background-color: var(--darktheme-bg-color);
+  color: var(--darktheme-text-color);
+}
+main .services-list .services-item img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-self: center;
+}
+main .services-list .services-item h2 {
+  font-size: 4rem;
+}
+main .services-list .services-item li {
+  list-style: square;
+  line-height: 4rem;
+}
+main .services-list .services-item li::marker {
+  color: #e7196a;
+}
+main .services-list .services-item button {
+  min-width: 80%;
+  padding: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #e7196a;
+  color: var(--bg-color);
+  font-weight: 500;
+  border: none;
+}
+
+footer {
+  height: 20vh;
+  border: 1px solid black;
+}
+
+:root {
+  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+  --bg-color: $secondary-color;
+  --bg-opacity: 0.1;
+  --darktheme-text-color: #fff;
+  --darktheme-bg-color: #1e2248;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kanit", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #1e2248;
+}/*# sourceMappingURL=style.css.map */
